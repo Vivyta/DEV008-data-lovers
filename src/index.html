@@ -1,12 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>pokemon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="active"><!--active me deja permanente la imagen en header  -->
+    <img src="imagenes/imageinicio.jpeg">
+  </header>
+  <br>
+  <nav>
+
+    <select class="tipos" id="tipos">
+      <option disabled selected>Tipos</option>
+      <option value="Fuego">Fuego</option>
+      <option value="Agua">Agua</option>
+      <option value="planta">planta</option>
+      <option value="dragon">Dragon</option>
+      <option value="roca">Roca</option>
+      <option value="psiquico">psiquico</option>
+      <option value="electrico">electrico</option>
+      <option value="normal">normal</option>
+    </select>
+
+
+
+    <select class="ordenalfabetico" id="ordenalfabetico">
+      <option disabled selected>Orden alfabetico</option>
+      <option value="Abc">A-Z</option>
+      <option value="Cba">Z-A</option>
+    </select>
+
+
+    <select class="numero" id="">
+      <option disabled selected>numero</option>
+      <option value="1,2,3">1</option>
+      <option value=""></option>
+    </select>
+
+
+  </nav>
+
+
+
+  <div id="root"></div>
+
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
