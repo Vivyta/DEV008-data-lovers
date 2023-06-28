@@ -2,6 +2,6 @@ export const example = () => {
   return 'example';
 };
 
-export const anotherExample = () => {
+export const filterdata = () => {
   return 'OMG';
 };

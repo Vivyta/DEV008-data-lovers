@@ -1,0 +1,16 @@
+root {
+    font-family:'Franklin Gothic Medium';
+    font-size: 20px;
+    color:#ffffff;
+    background-color: #ff5757;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;    
+}
+
+  /* main {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  } */
