@@ -1,16 +1,21 @@
-root {
-    font-family:'Franklin Gothic Medium';
-    font-size: 20px;
-    color:#ffffff;
-    background-color: #ff5757;
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;    
+.card{
+  color: rgb(11, 55, 216);
+  float: left;
+  padding: 25px;
+-ms-flex-item-align:center;
+  width:200px;
+  height: 400px;
+  background: linear-gradient(rgba(231, 25, 6, 0.75),rgba(42, 46, 56, 0.75));
+  border-radius: 15px;
+  font-size: 16px;
+  margin: 16px;
 }
+body{
 
-  /* main {
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  } */
+  background-image:url(imagenes.png/imageinicio.jpeg); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment:fixed;
+  
+  }

@@ -9,7 +9,7 @@
 
 <body>
   <header class="active"><!--active me deja permanente la imagen en header  -->
-    <img src="imagenes/imageinicio.jpeg">
+    <!-- <img src="imagenes/imageinicio.jpeg"> -->
   </header>
   <br>
   <nav>
@@ -35,23 +35,20 @@
     </select>
 
 
-    <select class="numero" id="numero">
-      <option disabled selected>numero</option>
-      <option value="1,2,3">1</option>
-      <option value=""></option>
-    </select>
+    <input type="number" id="num" min="0" max="251">
+    <input type="button" value="search">
 
 
   </nav>
 
 
-  
+
   <div id="root" 
      >
       
       </div>
 
-
+  <div class="container"  id="tarjeta" ></div>
   <script src="main.js" type="module"></script>
 </body>
 
