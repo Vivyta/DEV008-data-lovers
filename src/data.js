@@ -14,7 +14,7 @@ export const sortDataAz = (data) => {
   return dataOrderAbc;
   
 }
-export const sortDataZa= (data, sortBy,sortOrder)=>{
+export const sortDataZa= (data)=>{
  const  dataOrderCba= data;
  dataOrderCba.sort((a,b)=>{
     if (a.name > b.name) {

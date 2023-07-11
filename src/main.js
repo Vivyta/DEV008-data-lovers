@@ -37,3 +37,14 @@ document.getElementById("ordenalfabetico").addEventListener('change', () =>{
       return ordenalfabetico
 } 
 })
+document.getElementById("ordenalfabetico").addEventListener('change', () =>{
+  const selectOrder = document.getElementById("ordenalfabetico").value;
+let ordenalfabetico= "Cba"
+if (selectOrder==="Cba"){
+ ordenalfabetico= sortDataZa(data.pokemon)
+ pokeContainer.innerHTML = "";
+ pokemonImgCreator(ordenalfabetico);
+     console.log(ordenalfabetico);
+     return ordenalfabetico
+}
+})
