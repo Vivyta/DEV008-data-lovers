@@ -1,19 +1,28 @@
-export const sortData = (data, name, sortOrder) => {
-  const dataOrder = data;
-  dataOrder.sort( (a, b)=> {
+export const sortDataAz = (data) => {
+  const dataOrderAbc = data;
+  dataOrderAbc.sort( (a, b)=> {
     if (a.name > b.name) {
       return 1;
     }
     if (a.name < b.name) {
       return -1;
-    } else return 0;
-  });
-  return dataOrder.sort((a,b)=>{
-    if (a.name < b.name) {
-        return 1;
-      }
-      if (a.name > b.name) {
+    }
+     else return 0;
+    
+   });
+   //console.log(dataOrderAbc)
+  return dataOrderAbc;
+  
+}
+export const sortDataZa= (data, sortBy,sortOrder)=>{
+ const  dataOrderCba= data;
+ dataOrderCba.sort((a,b)=>{
+    if (a.name > b.name) {
         return -1;
+      }
+      if (a.name < b.name) {
+        return 1;
       } else return 0;
     });
-  }
+    return dataOrderCba;
+}
