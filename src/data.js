@@ -17,3 +17,8 @@ export const sortData = (data, name, sortOrder) => {
       } else return 0;
     });
   }
+
+  export const filtertype = (data, tipo) => {
+    return data.filter((typePokemon) => typePokemon.type.includes(tipo)); 
+  }
+

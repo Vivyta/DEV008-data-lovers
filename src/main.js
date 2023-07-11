@@ -1,7 +1,11 @@
 import data from "./data/pokemon/pokemon.js";
-import { sortData } from "./data.js"; 
-// console.log(data);
- const pokemon = data.pokemon;
+import { sortData,filtertype } from "./data.js"; 
+
+const pokemon = data.pokemon;
+console.log(filtertype(pokemon,"grass"))
+
+
+
  console.log(sortData(pokemon,"name","A-Z"))
 // function showpokemon(data) {
 //   let htmlContent = "";
