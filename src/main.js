@@ -1,7 +1,7 @@
 import data from "./data/pokemon/pokemon.js";
-import { sortDataAz,sortDataZa } from "./data.js"; 
- const pokemon = data.pokemon;
- const pokeContainer = document.getElementById("tarjeta");
+import { sortDataAz, sortDataZa, obtenerTipos } from "./data.js";
+const pokemon = data.pokemon;
+const pokeContainer = document.getElementById("tarjeta");
 
 function pokemonImgCreator(pokeImage) {
   pokeContainer.innerHTML = "";
@@ -10,7 +10,7 @@ function pokemonImgCreator(pokeImage) {
     const imagen = document.createElement("div");
     imagen.setAttribute("num", "name");
     imagen.setAttribute("type", "about");
-    
+    //console.log(pokemon.type)
     imagen.innerHTML = ` <div class="card">
                     <div><h2 class="nombrePokemon" id="nombre" >${pokemon.name}</h2>
                     <img class="pokemon-img.url" src=${pokemon.img}
@@ -18,7 +18,6 @@ function pokemonImgCreator(pokeImage) {
                     <p id="nombre">${pokemon.name}</p>
                     <p id="numero">${pokemon.num}</p>
                     <p id="tipo">${pokemon.type} </p>
-                    <p id="sobre">${pokemon.about} </p>
                     </div>
             </div>`;
     pokeContainer.append(imagen);
@@ -26,25 +25,33 @@ function pokemonImgCreator(pokeImage) {
 }
 pokemonImgCreator(data.pokemon);
 
-document.getElementById("ordenalfabetico").addEventListener('change', () =>{
+document.getElementById("ordenalfabetico").addEventListener("change", () => {
   const selectOrder = document.getElementById("ordenalfabetico").value;
- let ordenalfabetico= "Abc"
- if (selectOrder==="Abc"){
-  ordenalfabetico= sortDataAz(data.pokemon)
-  pokeContainer.innerHTML = "";
-  pokemonImgCreator(ordenalfabetico);
-      console.log(ordenalfabetico);
-      return ordenalfabetico
-} 
-})
-document.getElementById("ordenalfabetico").addEventListener('change', () =>{
-  const selectOrder = document.getElementById("ordenalfabetico").value;
-let ordenalfabetico= "Cba"
-if (selectOrder==="Cba"){
- ordenalfabetico= sortDataZa(data.pokemon)
- pokeContainer.innerHTML = "";
- pokemonImgCreator(ordenalfabetico);
-     console.log(ordenalfabetico);
-     return ordenalfabetico
-}
-})
+  let ordenalfabetico = "Abc";
+  if (selectOrder === "Abc") {
+    ordenalfabetico = sortDataAz(data.pokemon);
+    pokeContainer.innerHTML = "";
+    pokemonImgCreator(ordenalfabetico);
+    //console.log(ordenalfabetico);
+     }
+});
+document.getElementById("ordenalfabetico").addEventListener("change", () => {//cuando escuche en orden alfabetico lo que selecciona el usuario
+  const selectOrder = document.getElementById("ordenalfabetico").value; // toma y guarda lo que el usuario seleciona
+  let ordenalfabetico = "Cba"; //variable que define el id de mi html
+  if (selectOrder === "Cba") {  //comienza la funcion (echa en data)si el usuario selecciona mi equivalente a cba 
+    ordenalfabetico = sortDataZa(data.pokemon);  //trae el orden 
+    pokeContainer.innerHTML = "";  
+    pokemonImgCreator(ordenalfabetico);//crea la trajeta con los resultados
+    //console.log(ordenalfabetico);
+      }
+});
+
+ document.getElementById("tipos").addEventListener("change", () => {
+    const selectipo = document.getElementById("tipos").value;
+   let arrayfiltrado = []
+    arrayfiltrado = obtenerTipos(data,selectipo);
+     pokeContainer.innerHTML = "";  
+     pokemonImgCreator(arrayfiltrado);
+    
+ });
+// console.log(arrayfiltrado);
